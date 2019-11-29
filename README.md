@@ -36,6 +36,26 @@ git checkout -- <file>
 ```
 
 ## Using branches
+A branch allows us to have different versions of our code. For instance, we use branches when we start working in a new feature. We create a branch for this feature, we commit our changes to this branch (and push them) and when the feature is finnished, we merge the branch with the master branch so the feature is incorporated to the main branch of our application. To create a new branch and change to it:
+```git
+git checkout -b <feature_x>
+```
+If we need to go back to another branch (maybe a client wants us to make some changes to the production version so we are not interested in the feature_x change yet:
+```
+git checkout master
+```
+Do not forget to commit first your changes in the branch 'feature_x'. If you do not want to commit these changes (because they are in a messy state), you can stash them to work with that feature later.
+It is also possible to delete a branch:
+```git
+git branch -d <feature_x>
+```
+
+## Using tags
+Tags are very useful for saving the code at one point (for example when we release a new version). For creating a tag we should make the following steps:
+```git
+git tag <tagname> //This creates the tag locally
+git push origin --tags //We make a push including tags
+```
 
 ## Remove an already stagged file
 
