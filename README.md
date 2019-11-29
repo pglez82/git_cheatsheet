@@ -18,8 +18,24 @@ git clone <remoteurl>
 ## Making changes in your code
 Whenever you make a change in a file inside a git repository, we have to complete three steps in order to upload this file to our remote server. If we are not working with a remote server, we can ommit the third step:
 ```git
-git add .
-git commit -m "message"
-git push origin master
+git add . //stagging the files that we want to commit
+git commit -m "message" //commit the staged files
+git push origin master //push to the server the last unpushed commits
 ```
+## Configuring which files to ignore
+When we execute `git add .` we are staging all the files that are in the directory. Usually we want to avoid uploading files as .class in Java projects, .pyc in python, etc. For this we use the `.gitignore` file. [Here](https://git-scm.com/docs/gitignore) we have the full specification of the .gitignore file, but the most commonly case scenarios are:
+* *.class -> it will ignore all files with this extension
+* debug -> it will ignore files and directories with the name debug
+* debug/ -> it will ignore all the directories with the name debug
+* /debug/ -> it will ignore all the directories with the name debug that are at the same level as .gitignore
+
+## Reverting local changes
+For reverting local changes and go back to the last commmited version the easiest way it to execute:
+```git
+git checkout -- <file>
+```
+
+## Using branches
+
+## Remove an already stagged file
 
