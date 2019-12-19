@@ -49,6 +49,10 @@ It is also possible to delete a branch:
 ```git
 git branch -d <feature_x>
 ```
+Sometimes we may want to know what branches we have in our repository. For **listing branches** we can use: 
+```git
+git branch (only local branches) or git branch -a (this include remote branches as well)
+```
 
 ## Using tags
 Tags are very useful for saving the code at one point (for example when we release a new version). For creating a tag we should make the following steps:
