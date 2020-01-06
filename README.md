@@ -105,3 +105,21 @@ To **delete a tag remotely**, the easiest way is to execute:
 git push origin :tags/<tag_name> 
 ```
 
+## Working in teams
+Although git is useful when coding alone, it reaches maximum functionalily when working in a team. That means, multiple programmers working with the same repository. In this case, when we finnished working in a new funcionality (in a new branch), before merging, we may want to **update our code** with the remote version just in case someone has made some changes:
+```
+git pull //we should execute this in our master branch, before merging our changes
+```
+Note that this command will make a `git merge`so it is susceptible to provoke conflicts. 
+
+Another useful tool for working in teams are **GitHub Pull Requests**. This system allow us to merge branches using the web interface in github. The work flow is the following:
+1. Create a new branch and work on a new funcionality. Commit and push the changes.
+2. Go to GitHub and locate the new branch. Create a **pull request**.
+3. GitHub will inform if the branch can automatically be merged with master or it has files with conflicts.
+4. In the pull request page, we can post comments to the code, ask for a **code review** to another developer, see the changes in all the files, etc. 
+5. When you feal that the code in the new branch is ready to be merged, just press `Merge pull request` in the web interface and github will do the merge.
+6. Go your repository and pull `git pull` the changes to update your working copy.
+7. [Optional] Delete the new branch once is merged.
+
+It is important to understand that the pull request system is nothing more than a powerful tool for merging branches. It allow the team to discuss the changes, review them, etc. Another use is to push changes to repository that we do not own and we have forked. This functionality will not be discussed in this tutorial.
+
