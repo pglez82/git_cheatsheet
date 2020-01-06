@@ -1,5 +1,5 @@
 # Git and GitHub CheatSheet
-## Create a new repository
+## Create a new repository (or clone an existing one)
 From inside a directory in our machine we can create a new repository with the following command
 ```
 git init
@@ -10,8 +10,9 @@ When we **create a git repository** in our local machine from scratch we may wan
 ```git
 git remote add origin <remoteurl>
 ```
+Note: *origin* is an alias that we are giving to the remote respotiry. By convention is called *origin*. We will use it for pushing our code later.
 
-If we already have the respository in GitHub, we can **clone** it using:
+An alternative to the former steps, if we already have the respository in GitHub, we can **clone** it using:
 ```
 git clone <remoteurl>
 ```
@@ -22,8 +23,18 @@ git add . //stagging the files that we want to commit
 git commit -m "message" //commit the staged files
 git push origin master //push to the server the last unpushed commits
 ```
+Sometimes we will need to know the **status of our git repository**. That means checking which files are new, with files are added, deleted, etc. For that matter we can always execute the following command that gives us information about the repository status:
+```git
+git status
+```
+Sometimes we may need to **remove a file** from our git repository. This is done using the following command:
+```git
+git rm file.txt //or git rm --cached file.txt if we want to leave the file in our filessystem
+git commit -m "file deleted"
+```
+
 ## Configuring which files to ignore
-When we execute `git add .` we are staging all the files that are in the directory. Usually we want to avoid uploading files as .class in Java projects, .pyc in python, etc. For this we use the `.gitignore` file. [Here](https://git-scm.com/docs/gitignore) we have the full specification of the .gitignore file, but the most commonly case scenarios are:
+When we execute `git add .` we are staging all the files that are in the directory. Usually we want to avoid uploading files as .class in Java projects, .pyc in python, etc. For this we use the `.gitignore` file. [Here](https://git-scm.com/docs/gitignore) we have the full specification of the .gitignore file, but the most common case scenarios are:
 * *.class -> it will ignore all files with this extension
 * debug -> it will ignore files and directories with the name debug
 * debug/ -> it will ignore all the directories with the name debug
