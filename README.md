@@ -51,6 +51,11 @@ For reverting local changes and **go back to the last commmited version** the ea
 ```git
 git checkout -- <file>
 ```
+If we want to **revert all local changes** and not only a file:
+```git
+git checkout -- <file>
+git pull #to make sure we get the version that is in the repository
+```
 
 ## Using branches
 A branch allows us to have different versions of our code. For instance, we use branches when we start working in a new feature. We create a branch for this feature, we commit our changes to this branch (and push them) and when the feature is finnished, we merge the branch with the master branch so the feature is incorporated to the main branch of our application. To **create a new branch** and change to it:
