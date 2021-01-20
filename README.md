@@ -75,7 +75,7 @@ git stash pop #when we are back to the branch and we want to recover the stashed
 When we have finished developing the new functionality in our branch and we want to **merge** it with the master branch, we need to execute the following:
 ```bash
 git checkout master #change to the branch where we want to merge the changes
-git merge feature_x
+git merge <feature_x>
 ```
 
 After mergin the branch is very common to **delete the branch**:
