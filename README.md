@@ -89,7 +89,8 @@ git push origin :heads/<branch_name>
 
 Sometimes we may want to know what branches we have in our repository. For **listing branches** we can use: 
 ```bash
-git branch (only local branches) or git branch -a (this include remote branches as well)
+git branch #only local branches
+git branch -a #this include remote branches as well
 ```
 
 ## Solving conflicts
