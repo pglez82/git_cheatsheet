@@ -10,7 +10,7 @@ When we **create a git repository** in our local machine from scratch we may wan
 ```git
 git remote add origin <remoteurl>
 ```
-Note: *origin* is an alias that we are giving to the remote respotiry. By convention is called *origin*. We will use it for pushing our code later.
+Note: *origin* is an alias that we are giving to the remote respository. By convention is called *origin*. We will use it for pushing our code later. It is also possible to have multiple remotes for a repository (for instance, for using in complicated CI/CD setups).
 
 An alternative to the former steps, if we already have the respository in GitHub, we can **clone** it using:
 ```
