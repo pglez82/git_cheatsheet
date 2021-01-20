@@ -78,13 +78,13 @@ git checkout master #change to the branch where we want to merge the changes
 git merge feature_x
 ```
 
-After megin the branch is very common to **delete the branch**:
+After mergin the branch is very common to **delete the branch**:
 ```bash
 git branch -d <feature_x>
 ```
-It is important to not that the previous command only deletes the branch from the local repository. If we want to **delete the branch from the remote repository**:
+It is important to know that the previous command only deletes the branch from the local repository. If we want to **delete the branch from the remote repository**:
 ```bash
-git push origin :heads/<branch_name>
+git push <remote> --delete <feature_x>
 ```
 
 Sometimes we may want to know what branches we have in our repository. For **listing branches** we can use: 
