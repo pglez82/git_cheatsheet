@@ -34,7 +34,7 @@ git diff somefile
 
 Sometimes we may need to **remove a file** from our git repository. This is done using the following command:
 ```bash
-git rm file.txt //or git rm --cached file.txt if we want to leave the file in our filessystem
+git rm file.txt #or git rm --cached file.txt if we want to leave the file in our filessystem
 git commit -m "file deleted"
 ```
 Note: pushing the changes will delete the file from the remote repository.
@@ -68,13 +68,13 @@ git checkout master
 ```
 Do not forget to commit first your changes in the branch 'feature_x' (if not you will see thouse changes in the other branch as modfiications, and usually, we do not want that). If you do not want to commit these changes (because they are in a messy state), you can **stash** them to work with that feature later:
 ```bash
-git stash //saves the changes and reverts to the last commit
-git stash pop //when we are back to the branch and we want to recover the stashed changes
+git stash #saves the changes and reverts to the last commit
+git stash pop #when we are back to the branch and we want to recover the stashed changes
 ```
 
 When we have finished developing the new functionality in our branch and we want to **merge** it with the master branch, we need to execute the following:
 ```bash
-git checkout master //change to the branch where we want to merge the changes
+git checkout master #change to the branch where we want to merge the changes
 git merge feature_x
 ```
 
@@ -98,8 +98,8 @@ Git can manage automatically most of the conflcts that happen when mergin code (
 ## Using tags
 Tags are very useful for saving the code at one point (for example when we release a new version). For creating a tag we should make the following steps:
 ```bash
-git tag <tagname> //This creates the tag locally
-git push origin --tags //We make a push including tags
+git tag <tagname> #This creates the tag locally
+git push origin --tags #We make a push including tags
 ```
 To **delete a tag locally**:
 ```bash
@@ -113,7 +113,7 @@ git push origin :tags/<tag_name>
 ## Working in teams
 Although git is useful when coding alone, it reaches maximum functionalily when working in a team. That means, multiple programmers working with the same repository. In this case, when we finnished working in a new funcionality (in a new branch), before merging, we may want to **update our code** with the remote version just in case someone has made some changes:
 ```bash
-git pull //we should execute this in our master branch, before merging our changes
+git pull #we should execute this in our master branch, before merging our changes
 ```
 Note that this command will make a `git merge`so it is susceptible to provoke conflicts. 
 
