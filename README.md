@@ -77,6 +77,7 @@ When we have finished developing the new functionality in our branch and we want
 git checkout master #change to the branch where we want to merge the changes
 git merge <feature_x>
 ```
+Note: With `git merge` we are merging the branch <feature_x> into master in this case locally. When working in teams it is much better to use a **GitHub Pull Request** to merge feature branches. This way, other developers in the teams will be able to peer review our changes, making the workflow much better and collaborative.
 
 After mergin the branch is very common to **delete the branch**:
 ```bash
